@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       label: 'login',
     ),
   ];
-   int _cartItems=3;
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -55,7 +55,14 @@ class MyApp extends StatelessWidget {
           ),
           actions: [
 
-            ShoppingCartIcon(cartItems: _cartItems),
+            badges.Badge(
+              child: IconButton(
+                icon: Icon(Icons.shopping_cart_sharp),
+                onPressed: () {},
+              ),
+              badgeContent: Text("0",style: TextStyle(color: Colors.white),)
+              ,
+            ),
             IconButton(
               icon: Icon(Icons.search),
               onPressed: () {},
